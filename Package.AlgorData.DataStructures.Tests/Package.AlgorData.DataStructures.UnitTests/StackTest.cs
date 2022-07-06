@@ -140,5 +140,23 @@ namespace Package.AlgorData.DataStructures.UnitTests
             //Assert
             Assert.False(isInStack);
         }
+
+        [Fact(DisplayName="Stack Count Property Should Return Total Of Elements In The Stack")]
+        public void Stack_Count_Property_Should_Return_Total_Of_Elements_In_The_Stack()
+        {
+            //Arrange
+            Stack<int> stack = new Stack<int>();
+            stack.Push(12);
+            stack.Push(23);
+            stack.Push(67);
+            stack.Push(100);
+            stack.Pop();
+
+            //Act
+            var count = stack.Count;
+
+            //Assert
+            Assert.True(count == 3);
+        }
     }
 }

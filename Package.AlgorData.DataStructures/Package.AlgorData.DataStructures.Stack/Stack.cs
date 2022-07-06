@@ -2,6 +2,9 @@ namespace Package.AlgorData.DataStructures.Stack;
 public class Stack<T>
 {
     private StackNode<T>? root;
+    private int count = 0;
+
+    public int Count => count;
 
     public bool IsEmpty()
     {
@@ -15,12 +18,14 @@ public class Stack<T>
         if (root == null)
         {
             root = newNode;
+            IncrementCount();
         }
         else
         {
             StackNode<T> temp = root;
             root = newNode;
             newNode.Next = temp;
+            IncrementCount();
         }
     }
 
@@ -35,6 +40,7 @@ public class Stack<T>
         
         topElement = root.Data;
         root = root.Next;
+        DecrementCount();
     
         return topElement;
     }
@@ -85,6 +91,16 @@ public class Stack<T>
         }
 
         return default;
+    }
+
+    internal void IncrementCount()
+    {
+        this.count++;
+    }
+
+    internal void DecrementCount()
+    {
+        this.count--;
     }
 
 }
