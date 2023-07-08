@@ -1,15 +1,16 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.DataStructures", "Package.AlgorData.DataStructures", "{E7FB7443-1F05-48F3-8E48-C9C0A0EF4B77}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.DataStructures.Stack", "Package.AlgorData.DataStructures\Package.AlgorData.DataStructures.Stack\Package.AlgorData.DataStructures.Stack.csproj", "{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.DataStructures", "Package.AlgorData.DataStructures", "{3CB39A14-0097-4282-8371-D6B6BB157D53}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.DataStructures.Tests", "Package.AlgorData.DataStructures.Tests", "{3C561907-A607-4E74-9C5A-BFEA8F80D298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.DataStructures.Stack", "src\Package.AlgorData.DataStructures\Package.AlgorData.DataStructures.Stack\Package.AlgorData.DataStructures.Stack.csproj", "{811726A2-CE01-4031-A32C-76B27D3FB427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.DataStructures.UnitTests", "Package.AlgorData.DataStructures.Tests\Package.AlgorData.DataStructures.UnitTests\Package.AlgorData.DataStructures.UnitTests.csproj", "{2FB636FD-D0AB-490E-BDC4-1040238BA139}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.Tests", "Package.AlgorData.Tests", "{0F45213D-E522-4649-A5C0-D2C1079DF3F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.UnitTests", "src\Package.AlgorData.Tests\Package.AlgorData.UnitTests\Package.AlgorData.UnitTests.csproj", "{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,17 +21,19 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FB636FD-D0AB-490E-BDC4-1040238BA139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FB636FD-D0AB-490E-BDC4-1040238BA139}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FB636FD-D0AB-490E-BDC4-1040238BA139}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FB636FD-D0AB-490E-BDC4-1040238BA139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811726A2-CE01-4031-A32C-76B27D3FB427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811726A2-CE01-4031-A32C-76B27D3FB427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811726A2-CE01-4031-A32C-76B27D3FB427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811726A2-CE01-4031-A32C-76B27D3FB427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{76491E30-3DD9-4EC0-8026-68F2E3BCE0AB} = {E7FB7443-1F05-48F3-8E48-C9C0A0EF4B77}
-		{2FB636FD-D0AB-490E-BDC4-1040238BA139} = {3C561907-A607-4E74-9C5A-BFEA8F80D298}
+		{3CB39A14-0097-4282-8371-D6B6BB157D53} = {A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}
+		{811726A2-CE01-4031-A32C-76B27D3FB427} = {3CB39A14-0097-4282-8371-D6B6BB157D53}
+		{0F45213D-E522-4649-A5C0-D2C1079DF3F3} = {A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}
+		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3} = {0F45213D-E522-4649-A5C0-D2C1079DF3F3}
 	EndGlobalSection
 EndGlobal
