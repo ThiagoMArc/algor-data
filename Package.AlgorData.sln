@@ -2,15 +2,15 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DC03E25F-5ECB-49D2-8FF8-4379E0CDAF3B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.DataStructures", "Package.AlgorData.DataStructures", "{3CB39A14-0097-4282-8371-D6B6BB157D53}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.DataStructures", "Package.AlgorData.DataStructures", "{DC4DA65F-2C27-490E-8D40-ECDB2D04A623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.DataStructures.Stack", "src\Package.AlgorData.DataStructures\Package.AlgorData.DataStructures.Stack\Package.AlgorData.DataStructures.Stack.csproj", "{811726A2-CE01-4031-A32C-76B27D3FB427}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "src\Package.AlgorData.DataStructures\Stack\Stack.csproj", "{75B02BC4-33F3-4678-8404-71CB44DE2907}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.Tests", "Package.AlgorData.Tests", "{0F45213D-E522-4649-A5C0-D2C1079DF3F3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package.AlgorData.Tests", "Package.AlgorData.Tests", "{C39DBAB7-4F10-4845-8050-B6916EDB40F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.UnitTests", "src\Package.AlgorData.Tests\Package.AlgorData.UnitTests\Package.AlgorData.UnitTests.csproj", "{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package.AlgorData.UnitTests", "src\Package.AlgorData.Tests\Package.AlgorData.UnitTests\Package.AlgorData.UnitTests.csproj", "{0913E448-B733-4DBF-918E-BD34A5DD62CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,19 +21,19 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{811726A2-CE01-4031-A32C-76B27D3FB427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{811726A2-CE01-4031-A32C-76B27D3FB427}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{811726A2-CE01-4031-A32C-76B27D3FB427}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{811726A2-CE01-4031-A32C-76B27D3FB427}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B02BC4-33F3-4678-8404-71CB44DE2907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B02BC4-33F3-4678-8404-71CB44DE2907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B02BC4-33F3-4678-8404-71CB44DE2907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B02BC4-33F3-4678-8404-71CB44DE2907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0913E448-B733-4DBF-918E-BD34A5DD62CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0913E448-B733-4DBF-918E-BD34A5DD62CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0913E448-B733-4DBF-918E-BD34A5DD62CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0913E448-B733-4DBF-918E-BD34A5DD62CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3CB39A14-0097-4282-8371-D6B6BB157D53} = {A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}
-		{811726A2-CE01-4031-A32C-76B27D3FB427} = {3CB39A14-0097-4282-8371-D6B6BB157D53}
-		{0F45213D-E522-4649-A5C0-D2C1079DF3F3} = {A20976FC-2A24-49A4-BBC7-0722EFE5FB9D}
-		{00561FF0-3919-4F3F-A1FC-203CCD0F45B3} = {0F45213D-E522-4649-A5C0-D2C1079DF3F3}
+		{DC4DA65F-2C27-490E-8D40-ECDB2D04A623} = {DC03E25F-5ECB-49D2-8FF8-4379E0CDAF3B}
+		{75B02BC4-33F3-4678-8404-71CB44DE2907} = {DC4DA65F-2C27-490E-8D40-ECDB2D04A623}
+		{C39DBAB7-4F10-4845-8050-B6916EDB40F6} = {DC03E25F-5ECB-49D2-8FF8-4379E0CDAF3B}
+		{0913E448-B733-4DBF-918E-BD34A5DD62CE} = {C39DBAB7-4F10-4845-8050-B6916EDB40F6}
 	EndGlobalSection
 EndGlobal

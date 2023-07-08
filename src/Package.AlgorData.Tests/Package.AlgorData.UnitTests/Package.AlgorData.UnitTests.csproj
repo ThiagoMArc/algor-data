@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Package.AlgorData.DataStructures\Package.AlgorData.DataStructures.Stack\Package.AlgorData.DataStructures.Stack.csproj" />
+    <ProjectReference Include="..\..\Package.AlgorData.DataStructures\Stack\Stack.csproj" />
   </ItemGroup>
 
 </Project>
