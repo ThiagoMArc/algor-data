@@ -10,7 +10,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Return_True_When_It_Is_Empty()
         {
             //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
 
             //Act
             var isStackEmpty = stack.IsEmpty();
@@ -23,7 +23,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Return_False_When_It_Is_Not_Empty()
         {
             //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
             stack.Push(12);
             stack.Push(14);
             stack.Push(167);
@@ -40,7 +40,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Remove_And_Return_The_Top_Element_When_Pop_Operation_Occurs_On_Filled_Stack()
         {
              //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
             stack.Push(1);
             stack.Push(2);
             stack.Push(10);
@@ -57,7 +57,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Throw_InvalidOperationException_When_Pop_Operation_Occurs_On_Empty_Stack()
         {
             //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
             var expectedErrorMessage = "Can not Pop Empty Stack";
 
             //Act && Assert
@@ -69,7 +69,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Return_The_Top_Element_When_Peek_Operation_Occurs_On_Filled_Stack()
         {
              //Arrange
-            Stack<string> stack = new Stack<string>();
+            Stack<string> stack = new();
             stack.Push("Palavras");
             stack.Push("Pequenas");
             stack.Push("Ao Vento");
@@ -85,7 +85,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Throw_InvalidOperationException_When_Peek_Operation_Occurs_On_Empty_Stack()
         {
             //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
             var expectedErrorMessage = "Can not Peek From Empty Stack";
 
             //Act && Assert
@@ -97,7 +97,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Should_Wipe_All_Elements_When_Clear_Is_Invoked()
         {
             //Arrange
-            Stack<string> stack = new Stack<string>();
+            Stack<string> stack = new();
             stack.Push("Palavras");
             stack.Push("Pequenas");
             stack.Push("Ao Vento");
@@ -113,7 +113,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Contains_Returns_True_When_A_Given_Element_Is_In_The_Stack()
         {
             //Arrange
-            Stack<string> stack = new Stack<string>();
+            Stack<string> stack = new();
             stack.Push("Atirei");
             stack.Push("O pau no gato");
             stack.Push("Mas o gato não morreu");
@@ -129,7 +129,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Contains_Returns_False_When_A_Given_Element_Is_Not_In_The_Stack()
         {
             //Arrange
-            Stack<string> stack = new Stack<string>();
+            Stack<string> stack = new();
             stack.Push("Atirei");
             stack.Push("O pau no gato");
             stack.Push("Mas o gato não morreu");
@@ -145,7 +145,7 @@ namespace Package.AlgorData.DataStructures.UnitTests
         public void Stack_Count_Property_Should_Return_Total_Of_Elements_In_The_Stack()
         {
             //Arrange
-            Stack<int> stack = new Stack<int>();
+            Stack<int> stack = new();
             stack.Push(12);
             stack.Push(23);
             stack.Push(67);
