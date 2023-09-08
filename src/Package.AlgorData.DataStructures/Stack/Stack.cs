@@ -1,8 +1,9 @@
+using Shared;
 namespace Package.AlgorData.DataStructures.Stack
 {
     public class Stack<T>
     {
-        private StackNode<T>? root;
+        private Node<T>? root;
         private int count = 0;
 
         public int Count => count;
@@ -14,7 +15,7 @@ namespace Package.AlgorData.DataStructures.Stack
 
         public void Push(T data)
         {
-            StackNode<T> newNode = new(data);
+            Node<T> newNode = new(data);
 
             if (root == null)
             {
@@ -22,7 +23,7 @@ namespace Package.AlgorData.DataStructures.Stack
             }
             else
             {
-                StackNode<T> temp = root;
+                Node<T> temp = root;
                 root = newNode;
                 newNode.Next = temp;
             }
