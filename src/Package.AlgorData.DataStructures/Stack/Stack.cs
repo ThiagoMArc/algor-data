@@ -77,7 +77,7 @@ namespace Package.AlgorData.DataStructures.Stack
             return queriedElement != null;
         }
 
-        internal T? Search(T element)
+        private T? Search(T element)
         {
             var currentElement = root;
 
@@ -94,12 +94,12 @@ namespace Package.AlgorData.DataStructures.Stack
             return default;
         }
 
-        internal void IncrementCount()
+        private void IncrementCount()
         {
             this.count++;
         }
 
-        internal void DecrementCount()
+        private void DecrementCount()
         {
             this.count--;
         }
