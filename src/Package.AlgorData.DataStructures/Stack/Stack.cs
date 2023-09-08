@@ -4,6 +4,7 @@ namespace Package.AlgorData.DataStructures.Stack
     public class Stack<T>
     {
         private Node<T>? root;
+        private static LinkedListUtils<T> utils => new();
         private int count = 0;
 
         public int Count => count;
@@ -68,29 +69,7 @@ namespace Package.AlgorData.DataStructures.Stack
 
         public bool Contains(T element)
         {
-            if (root == null)
-            {
-                return false;
-            }
-
-            return Search(element) != null;
-        }
-
-        private T? Search(T element)
-        {
-            var currentElement = root;
-
-            while (currentElement != null)
-            {
-                if (Comparer<T>.Default.Compare(currentElement.Data, element) == 0)
-                {
-                    return currentElement.Data;
-                }
-
-                currentElement = currentElement.Next;
-            }
-
-            return default;
+            return root != null && Stack<T>.utils.Search(element, root) != null;
         }
     }
 }
