@@ -27,7 +27,7 @@ namespace Package.AlgorData.DataStructures.Stack
                 newNode.Next = temp;
             }
 
-            IncrementCount();
+            count++;
         }
 
         public T Pop()
@@ -41,7 +41,7 @@ namespace Package.AlgorData.DataStructures.Stack
 
             topElement = root.Data;
             root = root.Next;
-            DecrementCount();
+            count--;
 
             return topElement;
         }
@@ -72,9 +72,7 @@ namespace Package.AlgorData.DataStructures.Stack
                 return false;
             }
 
-            var queriedElement = Search(element);
-
-            return queriedElement != null;
+            return Search(element) != null;
         }
 
         private T? Search(T element)
@@ -93,16 +91,5 @@ namespace Package.AlgorData.DataStructures.Stack
 
             return default;
         }
-
-        private void IncrementCount()
-        {
-            this.count++;
-        }
-
-        private void DecrementCount()
-        {
-            this.count--;
-        }
-
     }
 }
