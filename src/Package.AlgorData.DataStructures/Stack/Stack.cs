@@ -19,15 +19,15 @@ namespace Package.AlgorData.DataStructures.Stack
             if (root == null)
             {
                 root = newNode;
-                IncrementCount();
             }
             else
             {
                 StackNode<T> temp = root;
                 root = newNode;
                 newNode.Next = temp;
-                IncrementCount();
             }
+
+            IncrementCount();
         }
 
         public T Pop()
