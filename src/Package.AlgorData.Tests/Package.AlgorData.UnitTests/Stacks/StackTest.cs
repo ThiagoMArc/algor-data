@@ -11,7 +11,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             PackageStack.Stack<int> stack = new();
 
             //Act
-            var isStackEmpty = stack.IsEmpty();
+            bool isStackEmpty = stack.IsEmpty();
 
             //Assert
             Assert.True(isStackEmpty);
@@ -28,7 +28,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             stack.Push(167);
 
             //Act
-            var isStackEmpty = stack.IsEmpty();
+            bool isStackEmpty = stack.IsEmpty();
 
             //Assert
             Assert.False(isStackEmpty);
@@ -45,7 +45,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             stack.Push(10);
 
             //Act
-            var poppedElement = stack.Pop();
+            int poppedElement = stack.Pop();
 
             //Assert
             Assert.Equal(10, poppedElement);
@@ -95,7 +95,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             Assert.Equal(ex.Message, expectedErrorMessage);
         }
 
-        [Fact(DisplayName="Stack Should Wipe All Elements When Clear Is Invokeds")]
+        [Fact(DisplayName="Stack Should Wipe All Elements When Clear Is Invoked")]
         public void Stack_Should_Wipe_All_Elements_When_Clear_Is_Invoked()
         {
             //Arrange
@@ -112,8 +112,10 @@ namespace Package.AlgorData.UnitTests.Stacks
             Assert.True(stack.IsEmpty());
         }
 
-        [Fact(DisplayName= "Stack Contains Returns True When A Given Element Is In The Stack")]
-        public void Stack_Contains_Returns_True_When_A_Given_Element_Is_In_The_Stack()
+        [Theory(DisplayName= "Stack Contains Returns True When A Given Element Is In The Stack Returns False Otherwise")]
+        [InlineData("O pau no gato", true)]
+        [InlineData("Maria", false)]
+        public void Stack_Contains_Returns_True_When_A_Given_Element_Is_In_The_Stack_Returns_False_Otherwise(string text, bool result)
         {
             //Arrange
             PackageStack.Stack<string> stack = new();
@@ -123,27 +125,10 @@ namespace Package.AlgorData.UnitTests.Stacks
             stack.Push("Mas o gato não morreu");
 
             //Act
-            var isInStack = stack.Contains("O pau no gato");
+            var isInStack = stack.Contains(text);
 
             //Assert
-            Assert.True(isInStack);
-        }
-
-        [Fact(DisplayName= "Stack Contains Returns False When A Given Element Is Not In The Stack")]
-        public void Stack_Contains_Returns_False_When_A_Given_Element_Is_Not_In_The_Stack()
-        {
-            //Arrange
-            PackageStack.Stack<string> stack = new();
-
-            stack.Push("Atirei");
-            stack.Push("O pau no gato");
-            stack.Push("Mas o gato não morreu");
-
-            //Act
-            var isInStack = stack.Contains("Maria");
-
-            //Assert
-            Assert.False(isInStack);
+            Assert.Equal(result, isInStack);
         }
 
         [Fact(DisplayName="Stack Count Property Should Return Total Of Elements In The Stack")]

@@ -18,7 +18,7 @@ namespace Package.AlgorData.DataStructures.Stack
         {
             Node<T> newNode = new(data);
 
-            if (root == null)
+            if (IsEmpty())
             {
                 root = newNode;
             }
@@ -36,7 +36,7 @@ namespace Package.AlgorData.DataStructures.Stack
         {
             T topElement;
 
-            if (root == null)
+            if (IsEmpty())
             {
                 throw new InvalidOperationException("Can not Pop Empty Stack");
             }
@@ -65,6 +65,7 @@ namespace Package.AlgorData.DataStructures.Stack
         public void Clear()
         {
             root = null;
+            count = 0;
         }
 
         public bool Contains(T element)

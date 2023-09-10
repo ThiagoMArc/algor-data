@@ -2,9 +2,9 @@ namespace Shared
 {
     public class LinkedListUtils<T>
     {
-        public T? Search(T element, Node<T> root)
+        public T? Search(T element, Node<T> node)
         {
-            var currentElement = root;
+            var currentElement = node;
 
             while (currentElement != null)
             {
