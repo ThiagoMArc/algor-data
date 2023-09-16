@@ -1,4 +1,4 @@
-namespace Shared
+namespace Package.AlgorData.DataStructures.Shared
 {
     public class LinkedListUtils<T>
     {

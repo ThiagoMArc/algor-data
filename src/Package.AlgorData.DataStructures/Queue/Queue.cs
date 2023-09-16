@@ -1,4 +1,5 @@
-using Shared;
+using Package.AlgorData.DataStructures.Shared;
+
 namespace Package.AlgorData.DataStructures.Queue
 {
     public class Queue<T>

@@ -1,4 +1,5 @@
-using Shared;
+using Package.AlgorData.DataStructures.Shared;
+
 namespace Package.AlgorData.DataStructures.Stack
 {
     public class Stack<T>
