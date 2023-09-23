@@ -25,6 +25,7 @@
     <ProjectReference Include="..\..\Package.AlgorData.DataStructures\Stack\Stack.csproj" />
     <ProjectReference Include="..\..\Package.AlgorData.DataStructures\Queue\Queue.csproj" />
     <ProjectReference Include="..\..\Package.AlgorData.Algorithms\Search\BinarySearch\BinarySearch.csproj" />
+    <ProjectReference Include="..\..\Package.AlgorData.Algorithms\Sort\Sort.csproj" />
   </ItemGroup>
 
 </Project>
