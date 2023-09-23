@@ -4,18 +4,29 @@ namespace Package.AlgorData.UnitTests.Sort
 {
     public class GeneralSortTest
     {
-        [Fact(DisplayName = "Sort An Array")]
-        public void Sort_An_Array()
+        [Theory(DisplayName = "Sort An Array")]
+        [MemberData(nameof(GetSortAlgorithm))]
+        public void Sort_An_Array(ISort<int> sortAlgorithm)
         {
             //Arrange
             int[] arr = new int[] { 35, 10, 25, 6 };
             int[] sortedArr = new int[] { 6, 10, 25, 35 };
 
             //Act
-            new GeneralSort<int>(new Selection<int>()).Sort(arr);
+            new GeneralSort<int>(sortAlgorithm).Sort(arr);
 
             //Assert
             Assert.Equal(arr, sortedArr);
+        }
+
+        public static IEnumerable<object[]> GetSortAlgorithm()
+        {
+            var sortAlgorithm = new List<object[]>
+            {
+                new object[] { new Selection<int>() },
+            };
+
+            return sortAlgorithm;
         }
     }
 }
