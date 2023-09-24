@@ -5,6 +5,7 @@ namespace Package.AlgorData.Algorithms.Sort
     public class Selection<T> : ISort<T>
     {
         private ArrayUtils<T> arrUtils => new ArrayUtils<T>();
+        private CompareUtils<T> comparer => new CompareUtils<T>();
 
         public void Sort(T[]array)
         {
@@ -14,13 +15,12 @@ namespace Package.AlgorData.Algorithms.Sort
                 int min = i;
                 for (int j=i+1; j< arraySize; j++)
                 {
-                    if(Comparer<T>.Default.Compare(array[j], array[min]) < 0)
+                    if(comparer.Less(array[j], array[min]))
                         min = j;
                 }
 
                 arrUtils.SwapElements(array, i, min);
             }
-
         }
     }
 }

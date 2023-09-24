@@ -24,6 +24,7 @@ namespace Package.AlgorData.UnitTests.Sort
             var sortAlgorithm = new List<object[]>
             {
                 new object[] { new Selection<int>() },
+                new object[] { new Insertion<int>() }
             };
 
             return sortAlgorithm;
