@@ -6,5 +6,11 @@ namespace Package.AlgorData.Utils
         {
             return Comparer<T>.Default.Compare(first, second) < 0;
         }
+
+        public bool Above(T first, T second)
+        {
+            return Comparer<T>.Default.Compare(first, second) > 0;
+        }
+
     }
 }

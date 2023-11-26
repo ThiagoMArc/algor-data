@@ -1,4 +1,5 @@
 using Package.AlgorData.Algorithms.Sort;
+using Sort;
 
 namespace Package.AlgorData.UnitTests.Sort
 {
@@ -24,7 +25,8 @@ namespace Package.AlgorData.UnitTests.Sort
             var sortAlgorithm = new List<object[]>
             {
                 new object[] { new Selection<int>() },
-                new object[] { new Insertion<int>() }
+                new object[] { new Insertion<int>() },
+                new object[] { new Quick<int>() }
             };
 
             return sortAlgorithm;
