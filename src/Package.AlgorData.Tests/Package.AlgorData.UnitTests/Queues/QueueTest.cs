@@ -1,3 +1,4 @@
+using Shouldly;
 using PackageQueue = Package.AlgorData.DataStructures.Queue;
 
 namespace Package.AlgorData.UnitTests.Queues
@@ -14,7 +15,7 @@ namespace Package.AlgorData.UnitTests.Queues
             bool isQueueEmpty = queue.IsEmpty();
 
             //Assert
-            Assert.True(isQueueEmpty);
+            isQueueEmpty.ShouldBeTrue();
         }
 
         [Fact(DisplayName="Queue Should Return False When It Is Not Empty")]
@@ -29,7 +30,7 @@ namespace Package.AlgorData.UnitTests.Queues
             bool isQueueEmpty = queue.IsEmpty();
 
             //Assert
-            Assert.False(isQueueEmpty);
+            isQueueEmpty.ShouldBeFalse();
         }
 
         [Fact(DisplayName = "Queue Should Return The Least Inserted Iem On A Filled Queue")]
@@ -44,7 +45,7 @@ namespace Package.AlgorData.UnitTests.Queues
             string leastInsertedItem = queue.Dequeue();
 
             //Assert
-            Assert.Equal("uma palavra", leastInsertedItem);
+            leastInsertedItem.ShouldBe("uma palavra");
         }
 
         [Fact(DisplayName = "Queue Should Throw InvalidOperationException When Dequeue Operation Occurs On Empty Queue")]
@@ -57,7 +58,7 @@ namespace Package.AlgorData.UnitTests.Queues
 
             //Act && Assert
             InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => { queue.Dequeue(); });
-            Assert.Equal(ex.Message, expectedErrorMessage);
+            ex.Message.ShouldBe(expectedErrorMessage);
         }
 
         [Fact(DisplayName = "Queue Should Wipe Data When Clear Is Invoked")]
@@ -72,7 +73,7 @@ namespace Package.AlgorData.UnitTests.Queues
             queue.Clear();
 
             //Assert
-            Assert.True(queue.IsEmpty());
+            queue.IsEmpty().ShouldBeTrue();
         }
 
         [Theory(DisplayName= "Queue Contains Returns True When A Given Element Is In The Queue Returns False Otherwise")]
@@ -91,7 +92,7 @@ namespace Package.AlgorData.UnitTests.Queues
             var isInqueue = queue.Contains(text);
 
             //Assert
-            Assert.Equal(result, isInqueue);
+            result.ShouldBe(isInqueue);
         }
 
     }

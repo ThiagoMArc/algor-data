@@ -1,3 +1,4 @@
+using Shouldly;
 using PackageBinarySearch = Package.AlgorData.Algorithms.Search.BinarySearch;
 
 namespace Package.AlgorData.UnitTests.Search
@@ -9,14 +10,14 @@ namespace Package.AlgorData.UnitTests.Search
         {
             //Arrange
             PackageBinarySearch.BinarySearch<string> binSearch = new();
-            string[] arr = new string[] {"a", "rosto" ,"maçã", "do"};
+            string[] arr = ["a", "rosto" ,"maçã", "do"];
             string element = "maçã";
 
             //Act
             int elementIndex = binSearch.IndexOf(arr, element);
 
             //Assert
-            Assert.Equal(2, elementIndex);
+            elementIndex.ShouldBe(2);
         }
 
         [Fact(DisplayName = "BinarySearch Should Return Minus One When Element Is Not In Array")]
@@ -24,14 +25,14 @@ namespace Package.AlgorData.UnitTests.Search
         {
             //Arrange
             PackageBinarySearch.BinarySearch<string> binSearch = new();
-            string[] arr = new string[] {"a", "rosto" ,"maçã", "do"};
+            string[] arr = ["a", "rosto" ,"maçã", "do"];
             string element = "carro";
 
             //Act
             int elementIndex = binSearch.IndexOf(arr, element);
 
             //Assert
-            Assert.Equal(-1, elementIndex);
+            elementIndex.ShouldBe(-1);
         }
 
         [Fact(DisplayName = "BinarySearch Should Throw InvalidOperationException In Empty Array")]
@@ -43,7 +44,7 @@ namespace Package.AlgorData.UnitTests.Search
 
             //Act && Assert
             InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => { binSearch.IndexOf(null, 12); });
-            Assert.Equal(ex.Message, expectedErrorMessage);
+            ex.Message.ShouldBe(expectedErrorMessage);
         }
     }
 }
