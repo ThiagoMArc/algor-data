@@ -1,4 +1,5 @@
 using Package.AlgorData.Algorithms.Sort;
+using Shouldly;
 using Sort;
 
 namespace Package.AlgorData.UnitTests.Sort
@@ -10,14 +11,14 @@ namespace Package.AlgorData.UnitTests.Sort
         public void Sort_An_Array(ISort<int> sortAlgorithm)
         {
             //Arrange
-            int[] arr = new int[] { 35, 10, 25, 6 };
-            int[] sortedArr = new int[] { 6, 10, 25, 35 };
+            int[] arr = [35, 10, 25, 6];
+            int[] sortedArr = [6, 10, 25, 35];
 
             //Act
             new GeneralSort<int>(sortAlgorithm).Sort(arr);
 
             //Assert
-            Assert.Equal(arr, sortedArr);
+            arr.ShouldBe(sortedArr);
         }
 
         public static IEnumerable<object[]> GetSortAlgorithm()

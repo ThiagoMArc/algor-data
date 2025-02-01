@@ -1,3 +1,4 @@
+using Shouldly;
 using PackageStack = Package.AlgorData.DataStructures.Stack;
 
 namespace Package.AlgorData.UnitTests.Stacks
@@ -14,7 +15,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             bool isStackEmpty = stack.IsEmpty();
 
             //Assert
-            Assert.True(isStackEmpty);
+            isStackEmpty.ShouldBeTrue();
         }
 
         [Fact(DisplayName="Stack Should Return False When It Is Not Empty")]
@@ -31,7 +32,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             bool isStackEmpty = stack.IsEmpty();
 
             //Assert
-            Assert.False(isStackEmpty);
+            isStackEmpty.ShouldBeFalse();
         }
 
         [Fact(DisplayName = "Stack Should Return Top Element When Pop Operation Pop On Filled Stack")]
@@ -48,8 +49,8 @@ namespace Package.AlgorData.UnitTests.Stacks
             int poppedElement = stack.Pop();
 
             //Assert
-            Assert.Equal(10, poppedElement);
-            Assert.Equal(2, stack.Peek());
+            poppedElement.ShouldBe(10);
+            stack.Peek().ShouldBe(2);
         }
 
         [Fact(DisplayName = "Stack Should Throw InvalidOperationException When Pop Operation Occurs On Empty Stack")]
@@ -62,7 +63,7 @@ namespace Package.AlgorData.UnitTests.Stacks
 
             //Act && Assert
             InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => { stack.Pop(); });
-            Assert.Equal(ex.Message, expectedErrorMessage);
+            ex.Message.ShouldBe(expectedErrorMessage);
         }
 
         [Fact(DisplayName = "Stack Should Inform What Is The Top Element When Peek Operation Occurs On Filled Stack")]
@@ -79,7 +80,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             var topElement = stack.Peek();
 
             //Assert
-            Assert.Equal("Ao Vento", topElement);
+            topElement.ShouldBe("Ao Vento");
         }
 
         [Fact(DisplayName = "Stack Should Throw InvalidOperationException When Peek Operation Occurs On Empty Stack")]
@@ -92,7 +93,7 @@ namespace Package.AlgorData.UnitTests.Stacks
 
             //Act && Assert
             InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => { stack.Peek(); });
-            Assert.Equal(ex.Message, expectedErrorMessage);
+            ex.Message.ShouldBe(expectedErrorMessage);
         }
 
         [Fact(DisplayName="Stack Should Wipe All Elements When Clear Is Invoked")]
@@ -109,7 +110,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             stack.Clear();
 
             //Assert
-            Assert.True(stack.IsEmpty());
+            stack.IsEmpty().ShouldBeTrue();
         }
 
         [Theory(DisplayName= "Stack Contains Returns True When A Given Element Is In The Stack Returns False Otherwise")]
@@ -128,7 +129,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             var isInStack = stack.Contains(text);
 
             //Assert
-            Assert.Equal(result, isInStack);
+            isInStack.ShouldBe(result);
         }
 
         [Fact(DisplayName="Stack Count Property Should Return Total Of Elements In The Stack")]
@@ -147,7 +148,7 @@ namespace Package.AlgorData.UnitTests.Stacks
             var count = stack.Count;
 
             //Assert
-            Assert.True(count == 3);
+            count.ShouldBe(3);
         }
     }
 }
